@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
   }
-  
   body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -40,11 +39,33 @@
   }
   
   .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
     color: white;
-    font-family: 'Norse', sans-serif;
+    font-family: 'Norse-Bold', sans-serif;
     font-size: 2rem;
     text-align: center;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    /* border-radius: 10px; */
+    margin-bottom: 250px;
+    width: 100%;
+    
   }
+  
+  .logo-icon {
+    width: 60px; /* Adjust the width of the logo icon as needed */
+    height: auto;
+    margin-left: 60px;
+  }
+  
+  .odin-text {
+    font-size: 2rem;
+    /* margin-left: 50px; */
+  }
+  
   
   .content {
     width: 60%;
@@ -124,4 +145,11 @@
   .login-link a:hover {
     text-decoration: underline;
   }
-  
+  /* .odin{
+    font-family:Norse-Bold;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 250px;
+  } */
