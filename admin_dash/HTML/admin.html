@@ -4,88 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/admin.css">
 </head>
 <body>
-    <div class="dashboard">
-        <aside class="sidebar">
-            <h2>Dashboard</h2>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Messages</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Tasks</a></li>
-                    <li><a href="#">Communities</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Privacy</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main class="content">
-            <header class="header">
-                <div class="welcome">
-                    <h2>Hi there,</h2>
-                    <h3>Morgan Oakley (@morgan)</h3>
-                </div>
-                <div class="actions">
-                    <button>New</button>
-                    <button>Upload</button>
-                    <button>Share</button>
-                </div>
-            </header>
-            <section class="projects">
-                <h2>Your Projects</h2>
-                <div class="project-cards">
-                    <!-- Example project card -->
-                    <div class="project-card">
-                        <h3>Super Cool Project</h3>
-                        <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
-                        <div class="project-actions">
-                            <span>⭐</span>
-                            <span>👁️</span>
-                            <span>🔗</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>Less Cool Project</h3>
-                        <p>Nullam condimentum ipsum ut lectus vehicula consectetur...</p>
-                        <div class="project-actions">
-                            <span>⭐</span>
-                            <span>👁️</span>
-                            <span>🔗</span>
-                        </div>
-                    </div>
-                    <!-- Add more project cards as needed -->
-                </div>
-            </section>
-            <aside class="announcements">
-                <h2>Announcements</h2>
-                <div class="announcement-card">
-                    <h3>Site Maintenance</h3>
-                    <p>Vestibulum condimentum tellus lacus, in accumsan elit maximus ac...</p>
-                </div>
-                <div class="announcement-card">
-                    <h3>Community Share Day</h3>
-                    <p>Nunc vel lectus tincidunt, rutrum nulla et, ornare libero...</p>
-                </div>
-                <div class="announcement-card">
-                    <h3>Updated Privacy Policy</h3>
-                    <p>Phasellus efficitur nisl egestas elit consectetur...</p>
-                </div>
-            </aside>
-            <aside class="trending">
-                <h2>Trending</h2>
-                <ul>
-                    <li>@tegan - World Peace Builder</li>
-                    <li>@morgan - Super Cool Project</li>
-                    <li>@kendall - Life Changing App</li>
-                    <li>@alex - No Traffic Maker</li>
-                </ul>
-            </aside>
-        </main>
+
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <span class="material-icons">dashboard</span>
+            <span>Dashboard</span>
+        </div>
+        <nav class="nav-links">
+            <div class="nav-item"><span class="material-icons">home</span>Home</div>
+            <div class="nav-item"><span class="material-icons">person</span>Profile</div>
+            <div class="nav-item"><span class="material-icons">message</span>Messages</div>
+            <div class="nav-item"><span class="material-icons">history</span>History</div>
+            <div class="nav-item"><span class="material-icons">task</span>Tasks</div>
+            <div class="nav-item"><span class="material-icons">groups</span>Communities</div>
+            <div class="nav-item"><span class="material-icons">settings</span>Settings</div>
+            <div class="nav-item"><span class="material-icons">support</span>Support</div>
+            <div class="nav-item"><span class="material-icons">privacy_tip</span>Privacy</div>
+        </nav>
     </div>
+
+    <header class="header">
+        <div class="header-left">
+            <img src="C:\Users\boyej\qtrams_training\admin_dash\Icons\DALL·E 2024-11-08 17.44.17 - A digital avatar with a yellow circular background featuring a simple, cartoon-style face illustration. The face has minimalistic details, including t.webp" alt="Avatar for Morgan Oakley" class="avatar">
+            <div class="greeting-text">
+                <p>Hi there,</p>
+                <h2>Morgan Oakley (@morgan)</h2>
+            </div>
+        </div>
+        <div class="search-bar">
+            <span class="material-icons">search</span>
+            <input type="search" placeholder="Search...">
+        </div>
+        <div class="header-right">
+            <button>New</button>
+            <button>Upload</button>
+            <button>Share</button>
+            <span class="material-icons">notifications</span>
+            <img src="https://fonts.googleapis.com/icon?family=Material+Icons" alt="User Avatar" class="avatar">
+            <span>Morgan Oakley</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="projects">
+            <div class="project-card">
+                <h3>Super Cool Project</h3>
+                <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+                <div class="project-actions">
+                    <span class="material-icons">star_border</span>
+                    <span class="material-icons">share</span>
+                    <span class="material-icons">visibility</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Less Cool Project</h3>
+                <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapien et, facilisis dolor.</p>
+                <div class="project-actions">
+                    <span class="material-icons">star_border</span>
+                    <span class="material-icons">share</span>
+                    <span class="material-icons">visibility</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Impossible App</h3>
+                <p>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</p>
+                <div class="project-actions">
+                    <span class="material-icons">star_border</span>
+                    <span class="material-icons">share</span>
+                    <span class="material-icons">visibility</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Easy Peasy App</h3>
+                <p>Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam.</p>
+                <div class="project-actions">
+                    <span class="material-icons">star_border</span>
+                    <span class="material-icons">share</span>
+                    <span class="material-icons">visibility</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Ad Blocker</h3>
+                <p>Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis.</p>
+                <div class="project-actions">
+                    <span class="material-icons">star_border</span>
+                    <span class="material-icons">share</span>
+                    <span class="material-icons">visibility</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Money Maker</h3>
+                <p>Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex.</p>
+                <div class="project-actions">
+                    <span class="material-icons">star_border</span>
+                    <span class="material-icons">share</span>
+                    <span class="material-icons">visibility</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-content">
+            <h3>Announcements</h3>
+            <div class="announcements">
+                <div class="announcement-item">
+                    <h4>Site Maintenance</h4>
+                    <p>System maintenance scheduled for Friday...</p>
+                </div>
+                <div class="announcement-item">
+                    <h4>Community Share Day</h4>
+                    <p>Join us for our monthly community sharing...</p>
+                </div>
+            </div>
+            <h3>Trending</h3>
+            <div class="trending">
+                <div class="trending-item">
+                    <img src="C:\Users\boyej\qtrams_training\admin_dash\Icons\DALL·E 2024-11-08 17.44.17 - A digital avatar with a yellow circular background featuring a simple, cartoon-style face illustration. The face has minimalistic details, including t.webp" alt="Avatar for Morgan Oakley" alt="Avatar for Tegan" class="avatar">
+                    <div>
+                        <span>@tegan</span>
+                        <p>World Peace Builder</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="C:\Users\boyej\qtrams_training\admin_dash\Icons\DALL·E 2024-11-08 17.44.17 - A digital avatar with a yellow circular background featuring a simple, cartoon-style face illustration. The face has minimalistic details, including t.webp" alt="Avatar for Morgan Oakley" alt="Avatar for Morgan" class="avatar">
+                    <div>
+                        <span>@morgan</span>
+                        <p>Super Cool Project</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="C:\Users\boyej\qtrams_training\admin_dash\Icons\DALL·E 2024-11-08 17.44.17 - A digital avatar with a yellow circular background featuring a simple, cartoon-style face illustration. The face has minimalistic details, including t.webp" alt="Avatar for Morgan Oakley" alt="Avatar for Kendall" class="avatar">
+                    <div>
+                        <span>@kendall</span>
+                        <p>Life Changing App</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="C:\Users\boyej\qtrams_training\admin_dash\Icons\DALL·E 2024-11-08 17.44.17 - A digital avatar with a yellow circular background featuring a simple, cartoon-style face illustration. The face has minimalistic details, including t.webp" alt="Avatar for Morgan Oakley" alt="Avatar for Alex" class="avatar">
+                    <div>
+                        <span>@alex</span>
+                        <p>No Traffic Maker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
 </body>
 </html>
