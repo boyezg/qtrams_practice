@@ -160,7 +160,7 @@ input:invalid {
 
 .login-link {
   margin-top: 1rem;
-  text-align: center;
+  text-align: 10px;
 }
 
 .login-link a {
@@ -171,3 +171,4 @@ input:invalid {
 .login-link a:hover {
   text-decoration: underline;
 }
+
