@@ -21,8 +21,12 @@ function displayBooks() {
     const bookCard = document.createElement("div");
     bookCard.classList.add("book-card");
 
+    const button = document.createElement("button");
+    button.innerHTML = '<i class="fas fa-list"></i>';
+    bookCard.appendChild(button);
+
     const titleElement = document.createElement("h3");
-    titleElement.textContent = book.title;
+    titleElement.textContent = "Book Title: " + book.title;
     bookCard.appendChild(titleElement);
 
     const authorElement = document.createElement("p");
@@ -37,20 +41,30 @@ function displayBooks() {
     readElement.textContent = "Status: " + (book.read ? "Read" : "Not Read");
     bookCard.appendChild(readElement);
 
-    const toggleButton = document.createElement("button");
-    toggleButton.textContent = book.read ? "Mark as Unread" : "Mark as Read";
-    toggleButton.onclick = function () {
-      toggleReadStatus(index);
-    };
-    bookCard.appendChild(toggleButton);
+    function editDetails() {
+      const optionsMenu = document.createElement("div");
+      optionsMenu.classList.add("options-menu");
 
-    const removeButton = document.createElement("button");
-    removeButton.textContent = "Remove";
-    removeButton.onclick = function () {
-      removeBook(index);
-    };
-    bookCard.appendChild(removeButton);
+      const toggleOption = document.createElement("button");
+      toggleOption.textContent = book.read ? "Mark as Unread" : "Mark as Read";
+      toggleOption.onclick = () => {
+        toggleReadStatus(index);
+        toggleOption.textContent = book.read ? "Mark as Unread" : "Mark as Read";
+      };
+      optionsMenu.appendChild(toggleOption);
 
+      const removeOption = document.createElement("button");
+      removeOption.textContent = "Remove";
+      removeOption.onclick = () => removeBook(index);
+      optionsMenu.appendChild(removeOption);
+
+      bookCard.appendChild(optionsMenu);
+      button.onclick = () => {
+        optionsMenu.style.display = optionsMenu.style.display === "none" ? "block" : "none";
+      };
+    }
+
+    editDetails();
     libraryContainer.appendChild(bookCard);
   });
 }
@@ -65,11 +79,11 @@ function removeBook(index) {
   displayBooks();
 }
 
-document.getElementById("newBookBtn").onclick = function () {
+document.getElementById("newBookBtn").onclick = () => {
   document.getElementById("bookFormDialog").style.display = "block";
 };
 
-document.getElementById("closeFormBtn").onclick = function () {
+document.getElementById("closeFormBtn").onclick = () => {
   document.getElementById("bookFormDialog").style.display = "none";
 };
 

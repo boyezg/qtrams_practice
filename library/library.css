@@ -1,26 +1,51 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f0f0f0;
+  background-color: #edf1a9;
   margin: 0;
   padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+#header {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #93f280;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* Added for round shape box */
+}
+
+/* Library Styles */
 #library {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
   max-width: 800px;
-  margin: 20px auto;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
   border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
   background-color: #fff;
+  text-align: left;
+  transition: transform 0.2s;
 }
 
 .book-card:hover {
@@ -28,38 +53,17 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-#bookFormDialog {
-  display: none;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  max-width: 500px;
-  width: 90%;
-  margin: 20px auto;
-}
-
-#bookFormDialog label {
-  display: inline-block;
-  width: 80px;
-  text-align: right;
-  margin-right: 10px;
-}
-
-#bookFormDialog input[type="text"],
-#bookFormDialog input[type="number"] {
-  width: 200px;
-  padding: 5px;
+.book-card h3 {
+  font-size: 1.1em;
   margin-bottom: 10px;
 }
 
-#bookFormDialog input[type="checkbox"] {
-  margin-bottom: 10px;
+.book-card p {
+  margin: 5px 0;
 }
 
+/* General Button Styles */
 button {
-  margin-top: 5px;
   padding: 8px 16px;
   background-color: #4CAF50;
   color: white;
@@ -71,4 +75,80 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+/* New Action Button on the Right */
+.action-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Options Menu */
+.options-menu {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.options-menu button {
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: #007bff;
+}
+
+.options-menu button:hover {
+  background-color: #0056b3;
+}
+
+/* Form Dialog */
+#bookFormDialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  z-index: 2;
+}
+
+#bookFormDialog label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+#bookFormDialog input[type="text"],
+#bookFormDialog input[type="number"] {
+  width: calc(100% - 90px);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.form-buttons {
+  text-align: right;
 }
