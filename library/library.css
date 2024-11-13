@@ -1,56 +1,74 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 800px;
-    padding: 1rem;
-  }
-  
-  #library {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 80%;
-    max-width: 800px;
-    margin-top: 1rem;
-  }
-  
-  .book-card {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 5px;
-    width: 200px;
-  }
-  
-  .book-card h3 {
-    margin-top: 0;
-  }
-  
-  button {
-    margin-top: 0.5rem;
-  }
-  
-  dialog {
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-  
-  form label,
-  form input {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+#library {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.book-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  background-color: #fff;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#bookFormDialog {
+  display: none;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+#bookFormDialog label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+#bookFormDialog input[type="text"],
+#bookFormDialog input[type="number"] {
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#bookFormDialog input[type="checkbox"] {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 5px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #45a049;
+}

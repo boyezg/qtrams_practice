@@ -1,16 +1,10 @@
-const myLibrary = [];
+let myLibrary = [];
 
-class Book {
-  constructor(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-  }
-
-  toggleRead() {
-    this.read = !this.read;
-  }
+function Book(title, author, pages, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.read = read;
 }
 
 function addBookToLibrary(title, author, pages, read) {
@@ -23,25 +17,46 @@ function displayBooks() {
   const libraryContainer = document.getElementById("library");
   libraryContainer.innerHTML = "";
 
-  myLibrary.forEach((book, index) => {
+  myLibrary.forEach(function (book, index) {
     const bookCard = document.createElement("div");
     bookCard.classList.add("book-card");
 
-    bookCard.innerHTML = `
-      <h3>${book.title}</h3>
-      <p>Author: ${book.author}</p>
-      <p>Pages: ${book.pages}</p>
-      <p>Status: ${book.read ? "Read" : "Not Read"}</p>
-      <button onclick="toggleReadStatus(${index})">${book.read ? "Mark as Unread" : "Mark as Read"}</button>
-      <button onclick="removeBook(${index})">Remove</button>
-    `;
+    const titleElement = document.createElement("h3");
+    titleElement.textContent = book.title;
+    bookCard.appendChild(titleElement);
+
+    const authorElement = document.createElement("p");
+    authorElement.textContent = "Author: " + book.author;
+    bookCard.appendChild(authorElement);
+
+    const pagesElement = document.createElement("p");
+    pagesElement.textContent = "Pages: " + book.pages;
+    bookCard.appendChild(pagesElement);
+
+    const readElement = document.createElement("p");
+    readElement.textContent = "Status: " + (book.read ? "Read" : "Not Read");
+    bookCard.appendChild(readElement);
+
+    const toggleButton = document.createElement("button");
+    toggleButton.textContent = book.read ? "Mark as Unread" : "Mark as Read";
+    toggleButton.onclick = function () {
+      toggleReadStatus(index);
+    };
+    bookCard.appendChild(toggleButton);
+
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.onclick = function () {
+      removeBook(index);
+    };
+    bookCard.appendChild(removeButton);
 
     libraryContainer.appendChild(bookCard);
   });
 }
 
 function toggleReadStatus(index) {
-  myLibrary[index].toggleRead();
+  myLibrary[index].read = !myLibrary[index].read;
   displayBooks();
 }
 
@@ -50,23 +65,23 @@ function removeBook(index) {
   displayBooks();
 }
 
-document.getElementById("newBookBtn").addEventListener("click", () => {
-  document.getElementById("bookFormDialog").showModal();
-});
+document.getElementById("newBookBtn").onclick = function () {
+  document.getElementById("bookFormDialog").style.display = "block";
+};
 
-document.getElementById("closeFormBtn").addEventListener("click", () => {
-  document.getElementById("bookFormDialog").close();
-});
+document.getElementById("closeFormBtn").onclick = function () {
+  document.getElementById("bookFormDialog").style.display = "none";
+};
 
-document.getElementById("bookForm").addEventListener("submit", (e) => {
+document.getElementById("bookForm").onsubmit = function (e) {
   e.preventDefault();
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
   const pages = document.getElementById("pages").value;
   const read = document.getElementById("read").checked;
   addBookToLibrary(title, author, pages, read);
-  document.getElementById("bookFormDialog").close();
+  document.getElementById("bookFormDialog").style.display = "none";
   e.target.reset();
-});
+};
 
 displayBooks();
