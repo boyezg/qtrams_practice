@@ -1,7 +1,7 @@
-/* Global Styles */
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #edf1a9;
+  /* background-color: #edf1a9; */
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
@@ -16,15 +16,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #93f280;
+  border: 1px solid #f0f5fa; 
   padding: 10px;
   margin-bottom: 20px;
-  background-color: #fff;
+  /* background-color: #edf1a9; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 20px; /* Added for round shape box */
+  /* border-radius: 20px;  */
 }
 
-/* Library Styles */
+
 #library {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -39,13 +39,17 @@ body {
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  border: 1px solid #ddd;
+  border: 1px solid #f0f5fa; 
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   text-align: left;
   transition: transform 0.2s;
+}
+
+.book-card button{
+  align-self:flex-end;
 }
 
 .book-card:hover {
@@ -62,11 +66,11 @@ body {
   margin: 5px 0;
 }
 
-/* General Button Styles */
+
 button {
   padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
+  /* background-color: #007bff;  */
+  color: black;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -74,15 +78,15 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #0056b3; 
 }
 
-/* New Action Button on the Right */
+
 .action-btn {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #007bff;
+  background-color: #007bff; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -92,33 +96,34 @@ button:hover {
 }
 
 .action-btn:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; 
 }
 
-/* Options Menu */
+
 .options-menu {
   display: none;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 40px;
+  right: 40px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #f0f5fa; 
   padding: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
+
 .options-menu button {
   width: 100%;
   margin-bottom: 5px;
-  background-color: #007bff;
+  /* background-color: #007bff;  */
 }
 
 .options-menu button:hover {
   background-color: #0056b3;
 }
 
-/* Form Dialog */
+
 #bookFormDialog {
   display: none;
   position: fixed;
@@ -127,7 +132,7 @@ button:hover {
   transform: translate(-50%, -50%);
   padding: 20px;
   background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  border: 1px solid #f0f5fa; 
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   max-width: 500px;
@@ -151,4 +156,20 @@ button:hover {
 
 .form-buttons {
   text-align: right;
+}
+.confirmation-dialog {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.confirmation-dialog button {
+  margin: 5px;
 }

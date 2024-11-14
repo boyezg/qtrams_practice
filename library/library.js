@@ -22,7 +22,7 @@ function displayBooks() {
     bookCard.classList.add("book-card");
 
     const button = document.createElement("button");
-    button.innerHTML = '<i class="fas fa-list"></i>';
+    button.innerHTML = '<i class="fa fa-ellipsis-v"></i>';
     bookCard.appendChild(button);
 
     const titleElement = document.createElement("h3");
@@ -44,6 +44,8 @@ function displayBooks() {
     function editDetails() {
       const optionsMenu = document.createElement("div");
       optionsMenu.classList.add("options-menu");
+      optionsMenu.style.display = "none";
+      bookCard.appendChild(optionsMenu);
 
       const toggleOption = document.createElement("button");
       toggleOption.textContent = book.read ? "Mark as Unread" : "Mark as Read";
@@ -55,12 +57,33 @@ function displayBooks() {
 
       const removeOption = document.createElement("button");
       removeOption.textContent = "Remove";
-      removeOption.onclick = () => removeBook(index);
+      removeOption.onclick = () => {
+      
+        const confirmationDialog = document.getElementById("confirmationDialog");
+        confirmationDialog.style.display = "block";
+      
+       
+        document.getElementById("confirmRemove").onclick = () => {
+          removeBook(index);
+          confirmationDialog.style.display = "none"; 
+        };
+      
+       
+        document.getElementById("cancelRemove").onclick = () => {
+          confirmationDialog.style.display = "none"; 
+        };
+      };
+      
       optionsMenu.appendChild(removeOption);
+      
 
-      bookCard.appendChild(optionsMenu);
-      button.onclick = () => {
-        optionsMenu.style.display = optionsMenu.style.display === "none" ? "block" : "none";
+      button.onmouseenter = () => {
+        optionsMenu.style.display = "flex";
+        optionsMenu.style.flexDirection = "column";
+      };
+      
+      bookCard.onmouseleave = () => {
+        optionsMenu.style.display = "none";
       };
     }
 
