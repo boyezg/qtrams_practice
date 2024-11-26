@@ -25,19 +25,19 @@ function calculateFibonacci() {
     document.getElementById("fibonacciOutput").innerText = `Fibonacci Sequence: ${result.join(", ")}`;
 }
 
-// Recursive Fibonacci function
+
 function fibsRecursive(n) {
     if (n <= 0) return [];
     if (n === 1) return [0];
     if (n === 2) return [0, 1];
 
-    const result = fibsRecursive(n - 1); // Recursively get the sequence for n-1 terms
-    const nextValue = result[result.length - 1] + result[result.length - 2]; // Calculate the next value
-    result.push(nextValue); // Append the next value to the sequence
+    const result = fibsRecursive(n - 1); 
+    const nextValue = result[result.length - 1] + result[result.length - 2]; 
+    result.push(nextValue); 
     return result;
 }
 
-// Calculate Fibonacci sequence using recursion
+
 function calculateFibonacciRecursive() {
     const input = document.getElementById("fibonacciInput").value;
     const n = parseInt(input, 10);
