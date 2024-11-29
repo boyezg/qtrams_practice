@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  margin: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+.controls input {
+  padding: 5px;
+  width: 80px;
+  margin: 0 10px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.chessboard-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.row-numbers {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0; /* Remove unnecessary spacing */
+  margin-right: 10px; /* Space between row numbers and the grid */
+  height: 400px; /* Matches the grid height */
+}
+
+.col-numbers-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.col-numbers {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  width: 400px; /* Matches the grid width */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  border: 2px solid #333;
+}
+
+.grid div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.grid .white {
+  background-color: #f9f9f9;
+}
+
+.grid .black {
+  background-color: #555;
+}
+
+.grid .path {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 50%;
+}
+
+.grid .start {
+  background-color: #2196F3;
+  color: white;
+}
+
+.grid .end {
+  background-color: #FF5722;
+  color: white;
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}

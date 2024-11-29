@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knight's Move Pathfinder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Knight's Move Pathfinder</h1>
+    <div class="controls">
+      <label for="start">Start (row, col):</label>
+      <input id="start" type="text" placeholder="e.g., 0,0">
+      <label for="end">End (row, col):</label>
+      <input id="end" type="text" placeholder="e.g., 7,7">
+      <button onclick="findKnightPath()">Find Shortest Path</button>
+    </div>
+    <div class="chessboard-wrapper">
+      <div class="row-numbers"></div>
+      <div class="grid" id="chessboard"></div>
+    </div>
+    <div class="col-numbers-wrapper">
+      <div class="col-numbers"></div>
+    </div>
+    <div id="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
