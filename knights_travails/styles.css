@@ -8,7 +8,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f3f3f3;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
@@ -17,7 +17,13 @@ body {
 .container {
   text-align: center;
   margin: 20px;
+  margin-bottom: 2px;
 }
+
+/* .container #output{
+  margin-left: 10%;
+  /* display: flex; */
+} */
 
 .controls {
   margin-bottom: 20px;
@@ -60,17 +66,19 @@ button:hover {
 }
 
 .col-numbers-wrapper {
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   margin-top: 10px;
+  margin-left: 50%;
 }
 
 .col-numbers {
   font-weight: bold;
   display: flex;
-  justify-content: space-between;
-  gap: 0;
-  width: 400px; /* Matches the grid width */
+  /* justify-content: space-between; */
+  gap: 42px;
+  margin-left: 20%;
+  
 }
 
 .grid {
@@ -114,8 +122,13 @@ button:hover {
   color: white;
 }
 
-#output {
-  margin-top: 20px;
+#output{
   font-size: 18px;
   color: #333;
+  /* margin-left: 60%; */
+  margin-top: 10px;
+  /* margin-bottom: 50%; */
+  /* text-align:center; */
+  display: flex;
+  margin-right: 1px;
 }
