@@ -154,7 +154,7 @@ class Node {
   
   console.log("Is balanced:", bst.isBalanced());
   
-  // Rebalancing tree
+  // Rebalancing
   bst.rebalance();
   console.log("Tree after rebalancing:");
   bst.prettyPrint();
