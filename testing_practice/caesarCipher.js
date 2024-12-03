@@ -1,4 +1,3 @@
-// caesarCipher.js
 export function caesarCipher(str, shift) {
     return str
         .split('')
