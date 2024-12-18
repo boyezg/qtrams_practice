@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display:flex;
+    
+    /* flex-direction: column; */
+    /* grid-template-rows: 1fr; */
+}
+#main-container{
+    /* display:flex; */
+    background-color: aqua;
+   
+}
+
+#container1{
+    display: flex;
+    /* padding: 10px 10px 10px 10px; */
+    
+}
+
+#container1 img{
+    border: 1rem solid red;
+    /* padding:10px 10px 10px 10px; */
+}
+
+#container2{
+    display: flex;
+}
+
+#container2 img{
+    border: 1rem solid rgb(102, 109, 245);
+    
+}
+
+/* scaleX(), scaleY(), scale(0.2,0.1) or rotate(deg), rotate(-rad), rotate(3.5) */
+/* Right Rotation*/
+#cat{
+    
+    /* rotate: 15deg;  */
+    /* transform: scaleX(); */
+    /* transform: rotate(15deg); */
+    /* transform: skewX(20deg); */
+    /* transform: perspective(30deg); */
+    /* transform: rotate3d(10); */
+    transform: perspective(100px) translateZ(-200px);
+    
+    
+}
+/* Left Rotation*/
+#dog{
+    rotate: -1rad;
+    /* transform: scaleY(); */
+    /* transform: skewY(20deg); */
+}
+/* Right Rotation by value percentage turn*/
+#tiger{
+    /* rotate: 0.3turn; */
+    transform: rotate(0.3turn);
+}
